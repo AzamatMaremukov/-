@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Car Animation</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
+
+        .road {
+            width: 100%;
+            height: 320px;
+            background-color: #808080;
+            position: relative;
+            overflow: hidden;
+            background-image: url('https://avatars.mds.yandex.net/i?id=d94a2db0f3637222ddc6d976fdc99219c1bc033c-4011440-images-thumbs&n=13');
+            background-repeat: repeat-x;
+            background-position: bottom;
+        }
+      
+
+        .car {
+            width: 200px;
+            height: 80px;
+            background-color: #00fff2;
+            position: absolute;
+            left: -200px;
+            bottom: 20px;
+            animation: drive 5s forwards;
+            border-radius: 10px;
+        }
+        h1{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+    
+
+        .car::before, .car::after {
+            content: '';
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #808080;
+            border: 4px solid black;
+            position: absolute;
+            bottom: -20px;
+        }
+
+        .car::before {
+            left: 20px;
+        }
+
+        .car::after {
+            right: 20px;
+        }
+
+        .windows {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            
+        }
+
+        .window {
+            width: 40px;
+            height: 30px;
+            background-color: #424242;
+            border-radius: 5px;
+            border: 1px solid black;
+        }
+        .pepl{
+            width: 20px;
+            height: 20px;
+            background-color: #000000;
+            border-radius: 50% 50%;
+            margin: 0 auto; 
+        }
+        .shei{
+            width: 5px;
+            height: 10px;
+            background-color: #000000;
+            
+            margin: 0 auto; 
+}
+        .lights {
+            display: flex;
+            justify-content: space-between;
+            padding: 5px;
+        }
+
+        .light {
+            width: 20px;
+            height: 10px;
+            background-color: #ffa500;
+            border-radius: 5px;
+        }
+        .lightb {
+            width: 20px;
+            height: 10px;
+            background-color: #dadada;
+            border-radius: 5px;
+        }
+
+        .grill {
+            width: 100%;
+            height: 12px;
+            background-color: #000;
+            position: absolute;
+            bottom: 0;
+            border-radius: 0 0 10px 10px;
+        }
+
+        @keyframes drive {
+            to {
+                left: calc(100% - 250px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="road">
+        <div class="car">
+            
+            
+            <div class="windows">
+                <div class="window">
+                    <div class="pepl"></div>
+                    <div class="shei"></div>
+                </div>
+                <div class="window">
+                    <div class="pepl"></div>
+                    <div class="shei"></div>
+                </div>
+                <h1>14</h1>
+                <div class="window">
+                    <div class="pepl"></div>
+                    <div class="shei"></div>
+                </div>
+                <div class="window">
+                   
+                    <div class="pepl"></div>
+                    <div class="shei"></div>
+                </div>
+            </div>
+            <div class="lights">
+                <div class="light"></div>
+                <div class="lightb"></div>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>
